@@ -1,0 +1,36 @@
+:host { all: initial; color-scheme: light dark; font-family: system-ui, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+button, textarea, select { font: inherit; }
+button { cursor: pointer; }
+.anchor-button, .selection-error { position: fixed; pointer-events: auto; font-size: 13px; padding: 9px 12px; border-radius: 8px; box-shadow: 0 2px 12px #0004; }
+.anchor-button { color: white; background: #2457bd; border: 1px solid #173b84; font-weight: 600; }
+.source-label { display: block; font-size: 11px; font-weight: 400; }
+.selection-error { max-width: min(320px, calc(100vw - 16px)); background: #fff3cf; color: #492e00; border: 1px solid #a87b17; }
+.panel { pointer-events: auto; position: fixed; top: 0; right: 0; width: min(400px, 100vw); height: 100dvh; display: flex; flex-direction: column; gap: 12px; padding: 16px; overflow: auto; background: #fff; color: #20242b; box-shadow: -4px 0 20px #0003; font-size: 14px; line-height: 1.45; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+header strong { display: block; font-size: 18px; }
+header span { font-size: 12px; color: #535c68; }
+.panel button, .panel select, .panel textarea { border: 1px solid #7d8793; border-radius: 6px; padding: 7px 9px; background: #fff; color: #20242b; }
+.panel button:focus-visible, .panel textarea:focus-visible, .panel select:focus-visible, .anchor-button:focus-visible { outline: 3px solid #4387ff; outline-offset: 2px; }
+.panel button:disabled { opacity: .6; cursor: default; }
+.notice { margin: 0; padding: 9px; border-radius: 6px; background: #eaf1ff; }
+.source-warning { margin: 0; padding: 9px; border-radius: 6px; background: #fff3cf; color: #492e00; }
+h2 { font-size: 14px; margin: 0 0 6px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 180px; overflow: auto; margin: 0; padding: 10px; background: #f2f4f7; border-radius: 6px; font: inherit; }
+.conversation { flex: 1 1 auto; min-height: 60px; overflow: auto; }
+.message { margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f2f4f7; overflow-wrap: anywhere; white-space: pre-wrap; }
+.message.user { background: #eaf1ff; }
+.message p { margin: 4px 0 0; }
+.message small { color: #a12c27; }
+.error { margin: 0; color: #a12c27; }
+form { display: grid; gap: 6px; }
+form textarea { width: 100%; resize: vertical; }
+.actions { display: flex; gap: 8px; }
+@media (prefers-color-scheme: dark) {
+  .panel { background: #1d2229; color: #f5f6f7; }
+  header span { color: #bdc5d0; }
+  .panel button, .panel select, .panel textarea { background: #2e3640; color: #f5f6f7; }
+  .notice, .message.user { background: #243b60; }
+  pre, .message { background: #303842; }
+  .error, .message small { color: #ffa9a3; }
+}

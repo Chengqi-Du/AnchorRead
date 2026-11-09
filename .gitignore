@@ -1,0 +1,10 @@
+*.md
+*.txt
+.venv/
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+target/
+.DS_Store

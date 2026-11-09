@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AnchorRead (mock preview)",
+  "version": "0.1.0",
+  "description": "Ask independent mock follow-up questions about ChatGPT answers.",
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
